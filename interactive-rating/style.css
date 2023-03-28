@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Overpass", "sans-serif";
+}
+
+.container {
+  background-color: var(--dark-blue);
+  width: 70%;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+main img {
+  width: 13%;
+  background-color: hsla(216, 12%, 54%, 0.1);
+  padding: 0.7rem;
+  border-radius: 50%;
+  margin: 0.5rem 0;
+}
+
+main h1 {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.container p {
+  color: var(--medium-grey);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+.rating {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.rating p {
+  width: 40px;
+  height: 40px;
+  background-color: hsla(216, 12%, 54%, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.rating p:hover {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.rating p.active {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+main button {
+  border: none;
+  background-color: var(--orange);
+  width: 100%;
+  font-family: "Overpass", "sans-serif";
+  color: var(--white);
+  padding: 0.7rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+main button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.thank-you {
+  text-align: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.thank-you img {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.thank-you span {
+  display: block;
+  font-size: 12px;
+  background-color: hsla(216, 12%, 54%, 0.1);
+  border-radius: 2rem;
+  color: var(--orange);
+  width: max-content;
+  padding: 0.3rem;
+  letter-spacing: 1px;
+  margin: auto;
+}
+
+.thank-you h2 {
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+.attribution {
+  color: var(--white);
+  position: fixed;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 93%, 74%);
+}
+
+
+
+@media screen and (min-width: 765px) {
+  .container {
+    width: 30%;
+  }
+}
