@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap");
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-dark-blue-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+}
+
+section {
+  background-color: var(--very-dark-blue-card);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 40%;
+  color: var(--soft-blue);
+}
+.image {
+  position: relative;
+}
+section img[alt="image"] {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overlay {
+  background-color: hsla(178, 100%, 50%,.3);
+  width: 100%;
+  height: 98%;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+section h3 {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0.8rem 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+p:nth-child(5) span:hover,
+section h3:hover {
+  color: var(--cyan);
+}
+
+section p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price p {
+  display: flex;
+  margin: 1rem 0;
+  font-size: 12px;
+  gap: 6px;
+  align-items: center;
+}
+
+.price p:first-child {
+  color: var(--cyan);
+}
+
+p:nth-child(5) {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 12px;
+  margin: 0.5rem 0;
+}
+
+p:nth-child(5) img {
+  width: 10%;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+p:nth-child(5) span {
+  margin-left: 5px;
+  color: var(--white);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+.attribution a {
+  color: var(--cyan);
+}
+
+
+
+@media screen and (min-width:767px){
+    section{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:992px){
+    section{
+        width: 20%;
+    }
+}
