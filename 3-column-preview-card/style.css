@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 50%;
+  margin: 1rem 0;
+}
+
+.stat {
+  padding: 2rem;
+  background-color: var(--bright-orange);
+  color: var(--very-light-gray-background-headings-buttons);
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.stat.dark-cyan {
+  background-color: var(--dark-cyan);
+  border-radius: 0;
+}
+
+.stat.very-dark-cyan {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.stat img {
+  width: 30%;
+  margin-left: 0.3rem;
+  margin-left: 0.5rem;
+}
+
+.stat h2 {
+  margin: 1rem 0;
+  margin-left: 0.5rem;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.stat p {
+  margin: 2rem 0;
+  color: var(--transparent-white-paragraphs);
+  font-size: 14px;
+}
+
+.stat button {
+  border: none;
+  color: var(--bright-orange);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.stat.dark-cyan button {
+  color: var(--dark-cyan);
+}
+
+.stat.very-dark-cyan button {
+  color: var(--very-dark-cyan);
+}
+
+.stat button:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  display: flex;
+  align-items: end;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    justify-content: center;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+  }
+
+  .stat {
+    border-radius: 0.3rem 0 0 0.3rem;
+  }
+
+  .stat {
+    line-height: 1.4rem;
+  }
+
+  .stat.dark-cyan {
+    background-color: var(--dark-cyan);
+    border-radius: 0;
+  }
+
+  .stat.very-dark-cyan {
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
+
+  .stat button {
+    margin-top: 4rem;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+  }
+
+  .stat img {
+    margin-left: 0;
+  }
+
+  .stat h2 {
+    margin-left: 0;
+  }
+}
