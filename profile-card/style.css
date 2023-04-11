@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--dark-cyan);
+  font-family: "Kumbh Sans", sans-serif;
+  overflow: hidden;
+  color: var(--very-dark-desaturated-blue);
+}
+
+img[alt="bg-pattern-top"] {
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  z-index: -1;
+}
+
+img[alt="bg-pattern-bottom"] {
+  position: absolute;
+  bottom: -200%;
+  right: -200%;
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.7rem;
+  box-shadow: 0.1rem 0.1rem 1rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+img[alt="bg-pattern-card"] {
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.card {
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 0 0 0.7rem 0.7rem;
+}
+
+.card > .content {
+  transform: translateY(-20%);
+}
+
+.card > .content > img {
+  border-radius: 100%;
+  border: 8px solid #fff;
+}
+
+.card > .content > h1 {
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.card h1 span {
+  font-weight: 400;
+  margin-left: 0.5rem;
+  color: var(--dark-grayish-blue);
+}
+
+.card p {
+  margin: 0.5rem 0;
+  color: var(--dark-grayish-blue);
+}
+
+.card ul {
+  list-style: none;
+  transform: translateY(30%);
+}
+
+.card li {
+  display: inline-block;
+  margin: 2rem 1rem 0 1rem;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.card li span {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.attribution a {
+  color: var(--very-dark-desaturated-blue);
+}
