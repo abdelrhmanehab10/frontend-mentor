@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(to top, var(--soft-blue), var(--soft-violet));
+  display: flex;
+  height: 100vh;
+}
+
+main {
+  background-color: var(--light-grayish-blue);
+  width: 500px;
+  margin: auto;
+  padding: 8rem 2rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.mobile {
+  position: absolute;
+  top: 0;
+  transform: translate(35%, -36%);
+}
+
+img[alt="bg-pattern"] {
+  transform: translateY(-80%);
+}
+
+img[alt="illustration-box"] {
+  display: none;
+}
+
+.desktop {
+  display: none;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 45px;
+}
+
+.qa {
+  text-align: left;
+  color: var(--dark-grayish-blue);
+}
+
+.qa h4 {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-out;
+}
+
+.qa p {
+  opacity: 0;
+  height: 0px;
+  margin: 1rem 0;
+  transition: all 0.3s ease-out;
+}
+
+.qa h4 img {
+  transition: all 0.3s ease-out;
+}
+
+.qa.active p {
+  opacity: 1;
+  height: 50px;
+}
+
+.qa.active h4 {
+  color: var(--very-dark-desaturated-blue);
+}
+
+.qa.active h4 img {
+  transform: rotate(180deg);
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  left: 0%;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 992px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  main {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    text-align: left;
+    padding: 4rem 2rem 2rem;
+  }
+
+  img[alt="illustration-woman-online"] {
+    position: static;
+    width: 100%;
+    transform: translateX(-25%);
+  }
+
+  img[alt="bg-pattern"],
+  img[alt="illustration-box"] {
+    width: 60%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateX(-50%);
+  }
+
+  img[alt="illustration-box"] {
+    display: block;
+    width: 15%;
+    top: 50%;
+    transform: translate(15px, -40%);
+    z-index: 2;
+  }
+}
