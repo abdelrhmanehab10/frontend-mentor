@@ -86,7 +86,7 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 1340px) {
+@media screen and (min-width: 992px) {
   main {
     text-align: left;
     height: auto;
