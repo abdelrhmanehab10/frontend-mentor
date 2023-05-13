@@ -36,9 +36,9 @@ header h2:nth-child(2) {
   letter-spacing: 1.5px;
 }
 
-header p{
-    width: 40%;
-    margin: auto;
+header p {
+  width: 70%;
+  margin: auto;
 }
 
 main {
@@ -105,15 +105,19 @@ footer {
   body {
     padding: 5rem 0;
   }
+  header p {
+    width: 40%;
+  }
   main {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 0.2fr);
+    grid-template-rows: repeat(2, 0.5fr);
     grid-template-areas:
       "card1 card2 card4"
       "card1 card3 card4";
     align-items: center;
+    justify-content: center;
   }
 
   .card:nth-child(1) {
